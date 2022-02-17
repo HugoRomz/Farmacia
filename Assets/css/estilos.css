@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Header principal o Navbar */
+
+header {
+    position: fixed;
+    background: #8e44ad;
+    padding: 20px;
+    width: 100%;
+    height: 36px;
+}
+
+/* Navbar, Titulo y botones */
+
+.area_izquierda h3 {
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 27px;
+    font-weight: 900;
+}
+
+.area_izquierda span {
+    color: #2ecc71;
+
+}
+
+/* Boton de cerrar sesion */
+.btn_salir {
+    padding: 5px;
+    background: #2ecc71;
+    text-decoration: none;
+    float: right;
+    margin-top: -40px;
+    margin-right: 40px;
+    border-radius: 3px;
+    font-size: 25px;
+    width: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+.btn_salir:hover {
+    background: #1c7c44;
+}
+
+/* Barra Lateral */
+
+.sidebar {
+    background: #732e90;
+    margin-top: 75px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+}
+
+.sidebar .imagen_perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.sidebar h3 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar hr {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Iconos y animacion del los botones de pestañas */
+.sidebar a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+.sidebar a:hover {
+    background: #1c7c44;
+}
+
+.sidebar i {
+    padding-right: 10px;
+}
+/* boton Sidebar */
+label #sidebar_btn{
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 400px;
+    font-size: 25px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: color;
+}
+label #sidebar_btn:hover{
+    color: #2ecc71 ;
+}
+/* Oculta el sideBar */
+#checkSidebar:checked ~ .sidebar{
+    left: -240px;
+}
+#checkSidebar:checked ~ .sidebar a span{
+    display: none;
+}
+#checkSidebar:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 217px;
+    width: 80px;
+    transition: 0.5s;
+}
+/* Ocultamos el checkbox */
+#checkSidebar{
+    display: none;
+}
+
+/* Contenido de la pagina */
+.MainContainer{
+    margin-left: 300px;
+    background: #fff;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+#checkSidebar:checked ~ .MainContainer{
+    margin-left: 60px;
+}
+
