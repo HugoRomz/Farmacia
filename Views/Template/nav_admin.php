@@ -5,11 +5,11 @@
            <i class="fa fa-bars nav_btn"></i>
        </div>
        <div class="mobile_nav_items">
-           <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-           <a href="#"><i class="fas fa-users"></i><span>Clientes</span></a>
-           <a href="#"><i class="fas fa-capsules"></i><span>Medicamentos</span></a>
-           <a href="#"><i class="fas fa-cash-register"></i><span>Punto de Venta</span></a>
-           <a href="#"><i class="fas fa-file-invoice"></i><span>Reportes</span></a>
+           <a href="#" class="active"><i class="fas fa-desktop active"></i><span>Dashboard</span></a>
+           <a href="#" class=""><i class="fas fa-users"></i><span>Clientes</span></a>
+           <a href="#" class=""><i class="fas fa-capsules"></i><span>Medicamentos</span></a>
+           <a href="#" class=""><i class="fas fa-cash-register"></i><span>Punto de Venta</span></a>
+           <a href="#" class=""><i class="fas fa-file-invoice"></i><span>Reportes</span></a>
        </div>
    </div>
    <!-- Barra Lateral -->

@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Estilos de la pagina principal -->
-    <link rel="stylesheet" href="<?=media();?>css/simplegrid.css">
+    <link rel="stylesheet" href="<?=media();?>css/grid.css">
     <link rel="stylesheet" href="<?=media();?>css/estilos.css">
-    
-
     <!-- Iconos de Materialize -->
     <link rel="stylesheet" href="<?=media();?>css/fontawesome/css/all.css">
 

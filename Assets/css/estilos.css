@@ -171,24 +171,7 @@ label #sidebar_btn:hover{
     margin-left: 60px;
 }
 
-.MainContainer .card-full p{
-    background: rgba(142, 68, 173, 0.50);
-    opacity: 16%;
-    padding: 15px;
-    margin-bottom: 10px;
-    font-size: 15px;
-    opacity: 0.8;
-}
-.MainContainer .card-2 p{
-    background: rgba(142, 68, 173, 0.50);
-    opacity: 16%;
-    padding: 15px;
-    width: 50%;
-    margin-bottom: 10px;
-    font-size: 15px;
-    opacity: 0.8;
-    
-}
+
 
 /* Responsive */
 .mobile_nav{
@@ -209,6 +192,10 @@ label #sidebar_btn:hover{
         padding: 10px 20px;
         transition: 0s;
     }
+    .MainContainer .card{
+        width: 50%;
+    }
+    
 
     #checkSidebar:checked ~ .MainContainer{
         margin-left: 0;
