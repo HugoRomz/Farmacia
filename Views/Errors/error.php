@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Pagina no encontrada</title>
-</head>
-<body>
-	<h1>Pagina no encontrada</h1>
-</body>
-</html>
+<?php headerAdmin($data); ?>
+
+<div class="MainContainer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+               <img src="<?=media();?>images/uploads/404error.png" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+<?php footerAdmin($data); ?>

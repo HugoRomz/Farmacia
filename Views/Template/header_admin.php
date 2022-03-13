@@ -8,7 +8,7 @@
     <!-- Estilos de la pagina principal -->
     <link rel="stylesheet" href="<?=media();?>css/grid.css">
     <link rel="stylesheet" href="<?=media();?>css/estilos.css">
-    <!-- Iconos de Materialize -->
+    <!-- Iconos de fontawsome -->
     <link rel="stylesheet" href="<?=media();?>css/fontawesome/css/all.css">
 
     <!-- Titulo de la pagina segun el controller -->

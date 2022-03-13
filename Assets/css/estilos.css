@@ -8,7 +8,7 @@
 header {
     z-index: 1;
     position: fixed;
-    background: #732e90;
+    background: #2C3E50;
     padding: 20px;
     width: calc(100% - 0%);
     height: 30px;
@@ -25,7 +25,7 @@ header {
 }
 
 .area_izquierda span {
-    color: #2ecc71;
+    color: rgba(241, 196, 15);
 
 }
 
@@ -47,7 +47,7 @@ header {
 }
 
 .btn_salir:hover {
-    color: #2ecc71;
+    color: rgba(241, 196, 15);
 }
 
 /* Barra Lateral */
@@ -55,7 +55,7 @@ header {
 .sidebar {
     z-index: 1;
     top: 0;
-    background: #57246d;
+    background: #2c3e50f1;
     margin-top: 70px;
     padding-top: 30px;
     position: fixed;
@@ -73,6 +73,8 @@ header {
     justify-content: center;
     align-items: center;
 }
+
+
 
 .sidebar .perfil .imagen_perfil {
     width: 100px;
@@ -107,7 +109,7 @@ header {
 }
 
 .sidebar a:hover {
-    background: #1c7c44;
+    background: rgba(241, 196, 15);
 }
 
 .sidebar i {
@@ -126,7 +128,7 @@ label #sidebar_btn{
     transition-property: color;
 }
 label #sidebar_btn:hover{
-    color: #2ecc71 ;
+    color: rgba(241, 196, 15) ;
 }
 /* Oculta el sideBar */
 #checkSidebar:checked ~ .sidebar{
@@ -152,8 +154,6 @@ label #sidebar_btn:hover{
 #checkSidebar{
     display: none;
 }
-
-
 /* Contenido de la pagina */
 .MainContainer{
     width: (100% - 250px);
@@ -171,12 +171,11 @@ label #sidebar_btn:hover{
     margin-left: 60px;
 }
 
-
-
 /* Responsive */
 .mobile_nav{
     display: none;
 }
+
  
 @media screen and (max-width:780px){
     .sidebar{
@@ -185,6 +184,7 @@ label #sidebar_btn:hover{
     #sidebar_btn{
         display: none;
     }
+    
 
     .MainContainer{
         margin-left: 0;
@@ -193,7 +193,7 @@ label #sidebar_btn:hover{
         transition: 0s;
     }
     .MainContainer .card{
-        width: 50%;
+        width: 100%;
     }
     
 
@@ -206,7 +206,7 @@ label #sidebar_btn:hover{
         width: calc(100% - 0%);
     }
     .nav_bar{
-        background: #421755;
+        background: #22313f;
         width: (100% - 0%);
         margin-top: 70px;
         display: flex;
@@ -226,10 +226,10 @@ label #sidebar_btn:hover{
         cursor: pointer;
     }
     .nav_bar .nav_btn:hover{
-        color: #2ecc71;
+        color: rgba(241, 196, 15);
     }
     .mobile_nav_items{
-        background: #57246d;
+        background: #2C3E50;
         display: none;
     }
     .mobile_nav_items a{
@@ -245,7 +245,7 @@ label #sidebar_btn:hover{
     }
 
     .mobile_nav_items a:hover{        
-        background: #1c7c44;
+        background: rgba(241, 196, 15);
     }
     .mobile_nav_items i{        
         padding-right: 10px;
@@ -255,6 +255,7 @@ label #sidebar_btn:hover{
     }
 
 }
+
 
 
 
