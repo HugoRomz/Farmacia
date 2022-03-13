@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="<?=media();?>css/estilos.css">
     <!-- Iconos de fontawsome -->
     <link rel="stylesheet" href="<?=media();?>css/fontawesome/css/all.css">
+    <!-- Datables -->
+    <link rel="stylesheet" href="<?=media();?>plugins/datatables/datatables.min.css">
 
     <!-- Titulo de la pagina segun el controller -->
     <title>Farmacia Dr.Mundo</title>

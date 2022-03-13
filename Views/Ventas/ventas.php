@@ -5,9 +5,10 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-header">
                         <h5 class="card-title">Registro de Ventas </h5>
                     </div>
+                    <div class="card-body"></div>
                 </div>
             </div>
             
@@ -17,10 +18,11 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-header">
                         <h5 class="card-title">Tabla de Ventas</h5>
                     
                     </div>
+                    <div class="card-body"></div>
                 </div>
             </div>
             
