@@ -9,7 +9,25 @@
                         <h5 class="card-title">Registro de Clientes </h5>
                     </div>
                     <div class="card-body">
-                        
+                        <form action="">
+                            <div class="form-style-6">
+                                
+                                <form>
+                                    <input type="text" name="nombre" placeholder="Tus nombres" />
+                                    <input type="text" name="apellido" placeholder="Tus apellidos" />
+                                    <input type="text" name="tel" placeholder="Teléfono" />
+                                    <input type="email" name="email" placeholder="Email" />
+                                    <input type="password" name="password" placeholder="Password" />
+                                    <!-- <textarea name="field3" placeholder="Type your Message"></textarea> -->
+                                    <br>
+                                    <br>
+                                    <input class="btn-guardar" type="submit" value="Guardar" />
+                                    <input class="btn-editar" type="submit" value="Editar" />
+                                    <input class="btn-eliminar" type="submit" value="Eliminar" />
+                                    <input class="btn-limpiar" type="submit" value="Limpiar" />
+                                </form>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -132,7 +150,7 @@
                                     <td>2013/03/03</td>
                                     <td>$342,000</td>
                                 </tr>
-                               
+
                             </tbody>
                             <tfoot>
                                 <tr>
