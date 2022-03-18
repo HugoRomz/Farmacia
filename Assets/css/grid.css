@@ -183,7 +183,6 @@
   padding: 0.5rem 1rem;
   margin-top: 10px;
   margin-bottom: 5px;
-  
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-header:first-child {
@@ -309,13 +308,13 @@
   background: rgba(241, 196, 15);
 }
 .form-style-6 .btn-editar{
-  background: #2980b9;
+  background: #20638f;
 }
 .form-style-6 .btn-eliminar{
   background: #e74c3c;
 }
 .form-style-6 .btn-limpiar{
-  background: #bdc3c7;
+  background: #22313f;
 
 }
 .form-style-6 input[type="submit"],

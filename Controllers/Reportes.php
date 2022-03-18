@@ -12,6 +12,7 @@
 			$data['page_tag'] = "Reportes";
 			$data['page_title'] = "Reportes";
 			$data['page_name'] = "reportes";
+			$data['page_functions_js'] = "functions_reportes.js";
 			$this->views->getView($this,"reportes",$data);
 		}
 

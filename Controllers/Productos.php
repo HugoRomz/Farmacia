@@ -12,6 +12,7 @@
 			$data['page_tag'] = "Productos";
 			$data['page_title'] = "Productos en venta";
 			$data['page_name'] = "productos";
+			$data['page_functions_js'] = "functions_productos.js";
 			$this->views->getView($this,"productos",$data);
 		}
 

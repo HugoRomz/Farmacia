@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="<?=media();?>css/fontawesome/css/all.css">
     <!-- Datables -->
     <link rel="stylesheet" href="<?=media();?>plugins/datatables/datatables.min.css">
+    <!-- <link rel="stylesheet" href="<?=media();?>plugins/datatables/bulma.min.css"> -->
+    
+    
 
     <!-- Titulo de la pagina segun el controller -->
     <title>Farmacia Dr.Mundo</title>
@@ -34,7 +37,7 @@
             <h3>Farmacia <span>Dr. Mundo</span> </h3>
         </div>
         <div class="area_derecha">
-            <a href="#" class="btn_salir"><i class="fa-solid fa-right-from-bracket"></i></i></a>
+            <a href="<?php media();?>login" class="btn_salir"><i class="fa-solid fa-right-from-bracket"></i></i></a>
         </div>
     </header>
     <!-- Termina el Header o navbar -->
