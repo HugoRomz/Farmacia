@@ -238,7 +238,6 @@
   }
 }
 
-
 /* Aqui son los forms */
 
 .form-style-6{
@@ -247,15 +246,34 @@
 	padding: 16px;
 	background: #F7F7F7;
 }
-.form-style-6 h1{
-	background: #43D1AF;
-	padding: 20px 0;
-	font-size: 140%;
-	font-weight: 300;
-	text-align: center;
-	color: #fff;
-	margin: -16px -16px 16px -16px;
+
+.form-style-6 select 
+{
+  -webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+  width: 350px;
+  height: 42px;
+	background: #fff;
+  margin-left: 5px;
+	border: 1px solid #ccc;
+  padding: 10px;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
 }
+.form-style-6 select:focus 
+{
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(241, 196, 15);
+	border: 1px solid rgba(241, 196, 15);
+	
+}
+
 .form-style-6 input[type="text"],
 .form-style-6 input[type="date"],
 .form-style-6 input[type="datetime"],
@@ -265,8 +283,7 @@
 .form-style-6 input[type="time"],
 .form-style-6 input[type="url"],
 .form-style-6 input[type="password"],
-.form-style-6 textarea,
-.form-style-6 select 
+.form-style-6 textarea
 {
 	-webkit-transition: all 0.30s ease-in-out;
 	-moz-transition: all 0.30s ease-in-out;
@@ -280,7 +297,8 @@
   width: 350px;
   height: 20px;
 	background: #fff;
-	margin-bottom:10px;
+	margin-bottom:20px;
+  margin-left: 5px;
 	border: 1px solid #ccc;
   padding: 20px;
 	color: #555;
@@ -295,8 +313,7 @@
 .form-style-6 input[type="time"]:focus,
 .form-style-6 input[type="url"]:focus,
 .form-style-6 input[type="password"]:focus,
-.form-style-6 textarea:focus,
-.form-style-6 select:focus
+.form-style-6 textarea:focus
 {
 	box-shadow: 0 0 5px rgba(241, 196, 15);
 	padding: 20px;

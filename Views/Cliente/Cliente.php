@@ -9,7 +9,8 @@
                         <h5 class="card-title">Registro de Clientes </h5>
                     </div>
                     <div class="card-body">
-                        <form action="formClientes">
+                        
+                        <form id="formCliente" name="formCliente">
                             <div class="form-style-6">                                
                                 
                                     <input type="text" id="txtNombre" name="txtNombre" placeholder="Tus nombres" required>
@@ -17,6 +18,7 @@
                                     <input type="text" id="txtTelefono" name="txtTelefono" placeholder="Teléfono" required>
                                     <input type="email" id="txtEmail" name="txtEmail" placeholder="Email" required>
                                     <input type="password" id="txtPassword" name="txtPassword" placeholder="Password" required>
+                                    <select id="selectAdministrador" name="selectAdministrador" required>
                                     <!-- <textarea name="field3" placeholder="Type your Message"></textarea> -->
                                     <br>
                                     <br>
