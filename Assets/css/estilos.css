@@ -407,13 +407,14 @@ label #sidebar_btn:hover{
   color: #FFF;
   background-color: #20638f;
   border-color: #20638f;
+  cursor: pointer;
 }
 
 
 .btn-eliminar {
   color: #FFF;
-  background-color: #22313f;
-  border-color: #22313f;
+  background-color: #000000;
+  border-color: #000000;
   cursor: pointer;
 }
 
@@ -447,7 +448,7 @@ label #sidebar_btn:hover{
 
 .badge-danger {
   color: #FFF;
-  background-color: #6A040F;
+  background-color: #f3142a;
 }
 
 

@@ -19,6 +19,12 @@
         $view_footer = "Views/Template/footer_admin.php";
         require_once ($view_footer);    
     }
+    function idRol()
+    {
+        $r1 = bin2hex(random_int(0, 1000));
+        return $r1;
+    }
+
 
 
 	//Muestra información formateada

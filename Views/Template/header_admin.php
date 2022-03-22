@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="<?=media();?>css/fontawesome/css/all.css">
     <!-- Datables -->
     <link rel="stylesheet" href="<?=media();?>plugins/datatables/datatables.min.css">
-    <!-- <link rel="stylesheet" href="<?=media();?>plugins/datatables/bulma.min.css"> -->
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="<?=media();?>plugins/sweetalert2/sweetalert2.min.css">
+    
     
     
 

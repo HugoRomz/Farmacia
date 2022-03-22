@@ -34,6 +34,7 @@
 				<button class="btn btn-eliminar" id="btnDelCliente" onclick="fntDelCliente(this);" title="Eliminar"><i class="fas fa-trash-alt"></i></button>
 				</div>';
 			}
+			
 			echo json_encode($data,JSON_UNESCAPED_UNICODE);
 			die();
 		}

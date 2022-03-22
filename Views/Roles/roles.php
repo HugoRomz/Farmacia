@@ -1,4 +1,5 @@
-<?php headerAdmin($data); ?>
+<?php headerAdmin($data);?>
+
 
 <div class="MainContainer">
     <div class="container">
@@ -6,21 +7,21 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">Registro de Clientes </h5>
+                        <h5 class="card-title">Roles </h5>
                     </div>
                     <div class="card-body">
                         
-                        <form id="formCliente" name="formCliente">
+                        <form id="formRoles" name="formRoles">
                             <div class="form-style-6">                                
-                                
-                                    <input type="text" id="txtNombre" name="txtNombre" placeholder="Tus nombres" required>
-                                    <input type="text" id="txtApellidos" name="txtApellidos" placeholder="Tus apellidos" required>
-                                    <input type="text" id="txtTelefono" name="txtTelefono" placeholder="Teléfono" required>
-                                    <input type="email" id="txtEmail" name="txtEmail" placeholder="Email" required>
-                                    <input type="password" id="txtPassword" name="txtPassword" placeholder="Password" required>
-                                    <select id="selectAdministrador" name="selectAdministrador" required></select>
+                                    <input type="hidden" id="idRol" name="idRol">
+                                    <input type="text" id="txtNombre" name="txtNombre" placeholder="Nombre del Rol" required>
+                                    <input type="text" id="txtDescripcion" name="txtDescripcion" placeholder="Descripción del rol" required>
+                                    <select id="selectStatus" name="selectStatus" required>
+                                        <option value="1">Activo</option>
+                                        <option value="0">Inactivo</option>
+                                    </select>
                                     <!-- <textarea name="field3" placeholder="Type your Message"></textarea> -->
-                                   <div class="bonotes">
+                                   <div>
                                        
                                     <input class="btn-guardar" type="submit" value="Guardar" />
                                     <input class="btn-editar" type="submit" value="Editar" />
@@ -44,17 +45,14 @@
                         <h5 class="card-title">Tabla de Clientes</h5>
                     </div>
                     <div class="card-body">
-                        <table id="tableCliente" class="table table-bordered table-hover">
+                        <table id="tableRoles" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
+                                    <th >ID</th>
                                     <th >Nombre</th>
-                                    <th >Apellidos</th>
-                                    <th >Teléfono</th>
-                                    <th >Email</th>
-                                    <th >Password</th>
-                                    <th >Rol</th>
+                                    <th >Descripción</th>
                                     <th >Status</th>
-                                    <th >Options</th>
+                                    <th >Option</th>
                                 </tr>
                             </thead>
                             <tbody> </tbody>                        
