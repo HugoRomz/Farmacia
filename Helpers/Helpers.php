@@ -9,6 +9,11 @@
     {
         return BASE_URL."Assets/";
     }
+     function getModal(String $nameModal,$data)
+    {
+        $view_modal = "Views/template/Modals/{$nameModal}.php";
+        require_once $view_modal;
+    }
     function headerAdmin($data="")
     {
         $view_header = "Views/Template/header_admin.php";
@@ -24,7 +29,7 @@
         $r1 = bin2hex(random_int(0, 1000));
         return $r1;
     }
-
+   
 
 
 	//Muestra información formateada

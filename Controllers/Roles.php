@@ -27,7 +27,7 @@
 					$data[$i]['status'] = '<span class="badge badge-danger">Deshabilitado</span>';
 				}
 				$data[$i]['options'] = '<div class="">
-                <button class="btn btn-eliminar btnPermisosRol" id="btnPermisosRol"  rl="'.$data[$i]['idrol'].'"title="Permisos"><i class="fas fa-key"></i></button>
+                <button class="btn btn-eliminar btnPermisosRol" id="btnPermisosRol"  rl="'.$data[$i]['idrol'].'" onclick="fntPermisos(this);" title="Permisos"><i class="fas fa-key"></i></button>
 				<button class="btn btn-editar" id="btnEditRoles"  rl="'.$data[$i]['idrol'].'" onclick="fntEditRoles(this);" title="Editar"><i class="fas fa-pencil-alt"></i></button>
 				<button class="btn btn-eliminar" id="btnDelRoles" rl="'.$data[$i]['idrol'].'" onclick="fntDelRoles(this);" title="Eliminar"><i class="fas fa-trash-alt"></i></button>
 				</div>';
