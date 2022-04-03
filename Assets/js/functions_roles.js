@@ -223,6 +223,7 @@ function fntSavePermisos(evnet){
             var objData = JSON.parse(request.responseText);
             if(objData.status)
             {
+                $('#modalPermisosRol').modal('hide');
                 Swal.fire(
                     'Permisos de usuario',
                     objData.msg,

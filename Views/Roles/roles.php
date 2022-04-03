@@ -31,8 +31,7 @@ headerAdmin($data);
 
                                     <input class="btn-guardar" type="submit" value="Guardar" />
                                     <input class="btn-editar" type="submit" value="Editar" />
-                                    <input class="btn-eliminar" type="submit" value="Eliminar" />
-                                    <input class="btn-limpiar" type="submit" value="Limpiar" />
+                                    <input class="btn-limpiar" type="reset" value="Limpiar" />
 
                                 </div>
                             </div>
