@@ -40,8 +40,8 @@ $(document).ready(function () {
     });
 
     if (document.querySelector("#formRoles")) {
-        var formCliente = document.querySelector("#formRoles");
-        formCliente.onsubmit = function (e) {
+        var formRoles = document.querySelector("#formRoles");
+        formRoles.onsubmit = function (e) {
             e.preventDefault();
 
             var strIdRol = document.querySelector('#idRol').value;

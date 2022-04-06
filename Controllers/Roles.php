@@ -4,6 +4,10 @@
 		public function __construct()
 		{
 			parent::__construct();
+			session_start();
+			if (empty($_SESSION['login'])) {
+				header('location:'.base_url().'login');
+			}
 		}
 
 		public function roles()
@@ -33,6 +37,22 @@
 				</div>';
 			}
 			echo json_encode($data,JSON_UNESCAPED_UNICODE);
+			die();
+		}
+
+		public function getSelectRoles()
+		{
+			$htmlOptions = "";
+			$data = $this->model->selectRoles();
+			if (count($data) > 0 ) {
+				for ($i=0; $i < count($data); $i++) { 
+					if ($data[$i]['status'] == 1) {
+						$htmlOptions .= '<option value="'.$data[$i]['idrol'].'">'.$data[$i]['nombrerol'].'</option>';
+					}
+					
+				}
+			}
+			echo $htmlOptions;
 			die();
 		}
 		public function getIdRol(String $idRol)

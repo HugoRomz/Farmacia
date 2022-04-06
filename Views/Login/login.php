@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,16 @@
     <title>Login Farmacia</title>
     <!-- Icono de la pagina -->
     <link rel="icon" type="image/x-icon" href="<?=media();?>images/favicon.ico">
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="<?=media();?>plugins/sweetalert2/sweetalert2.min.css">
 </head>
+
 <body>
+    <div id="divLoading">
+        <div>
+            <img src="<?=media();?>images/loading.svg" alt="Loading">
+        </div>
+    </div>
     <div class="wrapper">
         <div class="logo">
             <img src="<?=media();?>images/uploads/logo.svg" alt="" srcset="">
@@ -19,20 +28,21 @@
             <div class="titulo signup">Registrarse</div>
         </div>
         <div class="form-container">
-        <div class="slide-controls">
-               <input type="radio" name="slide" id="login" checked>
-               <input type="radio" name="slide" id="signup">
-               <label for="login" class="slide login">Inicio Sesion</label>
-               <label for="signup" class="slide signup">Resgistrate</label>
-               <div class="slide-tab"></div>
+
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Inicio Sesion</label>
+                <label for="signup" class="slide signup">Resgistrate</label>
+                <div class="slide-tab"></div>
             </div>
             <div class="form-inner">
-                <form action="#" class="login">
+                <form action="" class="login" name="formLogin" id="formLogin">
                     <div class="field">
-                        <input type="text" placeholder="Correo Electronico" required>
+                        <input type="email" name="txtEmail" id="txtEmail" placeholder="Correo Electronico" required>
                     </div>
                     <div class="field">
-                        <input type="password" placeholder="Contraseña" required>
+                        <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" required>
                     </div>
                     <div class="pass-link"><a href="<?=base_url();?>resetpass">Olvidaste tu contraseña?</a></div>
                     <div class="field">
@@ -43,7 +53,7 @@
 
                 <form action="#" class="singup">
                     <div class="field">
-                            <input type="text" placeholder="Nombre" required>
+                        <input type="text" placeholder="Nombre" required>
                     </div>
                     <div class="field">
                         <input type="email" placeholder="Correo Electronico" required>
@@ -58,30 +68,18 @@
                         <input type="submit" value="Registrate">
                     </div>
                 </form>
-                
+
             </div>
         </div>
     </div>
-
     <script>
-         const loginText = document.querySelector(".titulo-texto .login");
-         const loginForm = document.querySelector("form.login");
-         const loginBtn = document.querySelector("label.login");
-         const signupBtn = document.querySelector("label.signup");
-         const signupLink = document.querySelector("form .signup-link a");
-         signupBtn.onclick = (()=>{
-           loginForm.style.marginLeft = "-50%";
-           loginText.style.marginLeft = "-50%";
-         });
-         loginBtn.onclick = (()=>{
-           loginForm.style.marginLeft = "0%";
-           loginText.style.marginLeft = "0%";
-         });
-         signupLink.onclick = (()=>{
-           signupBtn.click();
-           return false;
-         });
-      </script>
-    
+        const base_url = "<?= base_url();?>";
+    </script>
+
+    <script src="<?=media();?>js/functions_login.js"></script>
+    <!-- SweetAlert -->
+    <script src="<?=media();?>plugins/sweetalert2/sweetalert2.min.js"></script>
+
 </body>
+
 </html>

@@ -19,8 +19,8 @@
            <h3>Akali Jhomen Tethi</h3>
        </div>
        <hr>
-       <a href="<?=base_url();?>home"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-       <a href="<?=base_url();?>cliente"><i class="fas fa-users"></i><span>Clientes</span></a>
+       <a href="<?=base_url();?>dashboard"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+       <a href="<?=base_url();?>cliente"><i class="fas fa-users"></i><span>Usuarios</span></a>
        <a href="<?=base_url();?>productos"><i class="fas fa-capsules"></i><span>Productos</span></a>
        <a href="<?=base_url();?>ventas"><i class="fas fa-cash-register"></i><span>Punto de Venta</span></a>
        <a href="<?=base_url();?>reportes"><i class="fas fa-file-invoice"></i><span>Reportes</span></a>

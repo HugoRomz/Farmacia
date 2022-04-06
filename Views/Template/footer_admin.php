@@ -6,7 +6,7 @@
 <script src="<?=media();?>js/jquery.min.js"></script>
 <script src="<?=media();?>js/Charts.js"></script>
 
-<!-- SweetAlert -->
+<!-- modals -->
 <script src="<?=media();?>js/modals.js"></script>
 <!-- SweetAlert -->
 <script src="<?=media();?>plugins/sweetalert2/sweetalert2.min.js"></script>
@@ -17,7 +17,7 @@
 
 <script src="<?=media();?>js/all.js"></script>
 
-<script src="<?= media(); ?>/js/<?= $data['page_functions_js']; ?>"></script>
+<script src="<?= media(); ?>js/<?= $data['page_functions_js']; ?>"></script>
 
 
 </html>
