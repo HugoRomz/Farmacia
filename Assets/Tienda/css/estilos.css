@@ -13,6 +13,7 @@
   overflow: hidden;
 }
 
+
 .navbar{
   box-shadow: 0px 1px 0px rgb(0 0 0 / 25%);
   width: 100%;
@@ -86,15 +87,15 @@ nav ul li a:hover{
 
 .col-1 p{
   font-size: 16px;
-  color: #b7b7b7;
+  color: #7b7878;
   font-weight: 100;
 }
 .col-1 p i{
   font-weight: 200;
-  color: #707070;
+  color: #3e3e3e;
 }
 
-.contenedor a{
+.contenedor .col-1 a{
   margin-top: 20px;
   position:absolute;
   width: 140px;
@@ -109,10 +110,60 @@ nav ul li a:hover{
   text-decoration: none;
 }
 
+.card{
+  
+  width: 330px;
+  height: 430px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgb(0,0, 0,0.2 );
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+  margin-top: -40px;
+}
+.card:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgb(0,0, 0,0.2 );
+}
+.card img{
+  width: 330px;
+  height: 320px;
+  margin-bottom: 10px;
+}
+.card h4{
+  color: #2D3E50;
+  font-weight: 600;
+}
+
+.card p{
+  color: #62666A;
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.card .links a{
+  color: #2D3E50;
+ font-size: 25px;
+ margin-left: 5px;
+  }
+
 .contenedor a:hover{
   width: 160px;
 }
 
+
+.equipo::after {
+  content: '';
+  width: 200px;
+  height: 10px;
+  background: linear-gradient(#F1C413,#F1C413);
+  position: absolute;
+  left: 0px;
+  top: 102px;
+}
 .col-1::after{
   content: '';
   width: 10px;

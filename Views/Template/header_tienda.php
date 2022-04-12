@@ -20,7 +20,6 @@
                     <li><a href="<?=base_url();?>">Inicio</a></li>
                     <li><a href="<?=base_url();?>tienda">Productos</a></li>
                     <li><a href="<?=base_url();?>contacto">Contacto</a></li>
-                    <li><a href="<?=base_url();?>extra">Otros</a></li>
                     <li><a href="<?=base_url();?>logout">Iniciar Sesión</a></li>
                 </ul>
             </nav>
