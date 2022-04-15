@@ -6,22 +6,16 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">Registro de Productos</h5>
+                        <h5 class="card-title">Registro de Categorias</h5>
                     </div>
                     <div class="card-body">
-                        <form id="formProductos" name="formProductos">
+                        <form id="formCategorias" name="formCategorias">
                             <div class="form-style-6">
-                                <input type="hidden" id="idProducto" name="idProducto">
-                                <input type="text" id="txtNombreProductos" name="txtNombreProductos"
-                                    placeholder="Nombre del Producto" required>
-                                <input type="text" id="txtApellidos" name="txtApellidos" placeholder="Tus apellidos"
+                                <input type="hidden" id="idCategorias" name="idCategorias">
+                                <input type="text" id="txtNombreCategorias" name="txtNombreCategorias"
+                                    placeholder="Nombre de la Categoria" required>                               
+                               <input type="text" id="txtAreaCategoria" name="txtAreaCategoria" placeholder="Descripcion de la Categoria"
                                     required>
-                                <input type="text" id="txtTelefono" name="txtTelefono" placeholder="Teléfono" required>
-                                <input type="email" id="txtEmailCliente" name="txtEmailCliente" placeholder="Email" required>
-                                <input type="password" id="txtPassword" name="txtPassword" placeholder="Password"
-                                    required>
-                                <select id="selectRol" name="selectRol" required></select>
-                                <!-- <textarea name="field3" placeholder="Type your Message"></textarea> -->
                                 <div>
                                     <input class="btn-guardar" type="submit" value="Guardar" />
                                     <input class="btn-editar" type="submit" value="Editar" />
@@ -39,20 +33,15 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">Tabla de Productos</h5>
+                        <h5 class="card-title">Tabla de Categorias</h5>
                     </div>
                     <div class="card-body">
-                        <table id="tableCliente" class="table table-bordered table-hover">
+                        <table id="tableCategorias" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>ID</th>
                                     <th>Nombre</th>
-                                    <th>Apellidos</th>
-                                    <th>Teléfono</th>
-                                    <th>Email</th>
-                                    <th>Password</th>
-                                    <th>Rol</th>
-                                    <th>Status</th>
+                                    <th>Descripción</th>
                                     <th>Options</th>
                                 </tr>
                             </thead>
