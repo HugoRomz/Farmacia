@@ -43,6 +43,18 @@
 		}
 		die();
 	}
+	public function getSelectCategorias()
+		{
+			$htmlOptions = "";
+			$data = $this->model->selectCategoria();
+			if (count($data) > 0 ) {
+				for ($i=0; $i < count($data); $i++) { 	
+						$htmlOptions .= '<option value="'.$data[$i]['idcategoria'].'">'.$data[$i]['nombre'].'</option>';					
+				}
+			}
+			echo $htmlOptions;
+			die();
+		}
 
 		
 		public function setCategorias(){

@@ -12,16 +12,14 @@
                         <form id="formProductos" name="formProductos">
                             <div class="form-style-6">
                                 <input type="hidden" id="idProducto" name="idProducto">
-                                <input type="text" id="txtNombreProductos" name="txtNombreProductos"
-                                    placeholder="Nombre del Producto" required>
-                                <input type="text" id="txtApellidos" name="txtApellidos" placeholder="Tus apellidos"
-                                    required>
-                                <input type="text" id="txtTelefono" name="txtTelefono" placeholder="Teléfono" required>
-                                <input type="email" id="txtEmailCliente" name="txtEmailCliente" placeholder="Email" required>
-                                <input type="password" id="txtPassword" name="txtPassword" placeholder="Password"
-                                    required>
-                                <select id="selectRol" name="selectRol" required></select>
-                                <!-- <textarea name="field3" placeholder="Type your Message"></textarea> -->
+                                <input type="text" id="txtNombreProductos" name="txtNombreProductos" placeholder="Nombre del Producto" required>
+                                <select id="selectCategorias" name="selectCategorias" required></select>
+                                <input type="text" id="txtDescricion" name="txtDescricion" placeholder="Descricion" required>
+                                <input type="number" name="numberStock" id="numberStock" required>
+                                <input type="date" name="dateCaducidad" id="dateCaducidad" required>
+                                <input type="text" id="txtPrecio" name="txtPrecio" placeholder="Precio" required>
+                                <!-- <input type="password" id="" name="" placeholder="Imagen"
+                                    required> -->
                                 <div>
                                     <input class="btn-guardar" type="submit" value="Guardar" />
                                     <input class="btn-editar" type="submit" value="Editar" />
@@ -42,16 +40,16 @@
                         <h5 class="card-title">Tabla de Productos</h5>
                     </div>
                     <div class="card-body">
-                        <table id="tableCliente" class="table table-bordered table-hover">
+                        <table id="tableProductos" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>ID</th>
                                     <th>Nombre</th>
-                                    <th>Apellidos</th>
-                                    <th>Teléfono</th>
-                                    <th>Email</th>
-                                    <th>Password</th>
-                                    <th>Rol</th>
+                                    <th>Categoria</th>
+                                    <th>Descricion</th>
+                                    <th>Stock</th>
+                                    <th>Caducidad</th>
+                                    <th>Precio</th>
                                     <th>Status</th>
                                     <th>Options</th>
                                 </tr>

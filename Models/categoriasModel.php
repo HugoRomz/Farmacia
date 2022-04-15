@@ -43,6 +43,13 @@
 			$request = $this->select($sql);
 			return $request;
 		}
+		public function selectCategoria()
+        {
+            $sql = "SELECT * FROM categoria;";
+            $request = $this->select_all($sql);
+            return $request;
+        }
+
 		public function delCategorias($idCategorias)
     {
         $sql = "DELETE FROM categoria WHERE idcategoria = $idCategorias";
