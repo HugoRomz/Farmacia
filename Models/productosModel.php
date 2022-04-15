@@ -32,21 +32,21 @@
 			return $request_insert;
 		}
 
-	// 	public function updateCliente(int $strIdCliente,String $strNombre,String $strApellidos,int $strTelefono,String $strEmail,String $strPassword,int $strSelectRol)
-    // {
-    //     $this->idCliente = $strIdCliente;
-    //     $this->nombre = $strNombre;
-    //     $this->apellido = $strApellidos;
-	// 	$this->telefono = $strTelefono;
-	// 	$this->email = $strEmail;
-	// 	$this->passwor = $strPassword;
-    //     $this->selectRol = $strSelectRol;
+		public function updateProductos(int $strIdProducto,String $strNombreProductos,String $strSelectCategorias,String $strDescricion,int $intStock,String $strCaducidad,float $intPrecio)
+    {
+        $this->idProducto = $strIdProducto;
+        $this->NombreProductos = $strNombreProductos;
+        $this->SelectCategorias = $strSelectCategorias;
+		$this->Descricion = $strDescricion;
+		$this->Stock = $intStock;
+		$this->Caducidad = $strCaducidad;
+        $this->Precio = $intPrecio;
         
-    //     $sql = "UPDATE persona SET nombres=?,apellido=?,telefono=?,email_user=?,password=?,idrol=? WHERE idpersona = $this->idCliente";
-    //     $arrData = array($this->nombre,$this->apellido,$this->telefono,$this->email,$this->passwor,$this->selectRol);
-    //     $request = $this->update($sql, $arrData);
-    //     return $request;
-    // }
+        $sql = "UPDATE producto SET nombrep=?,idcategoria=?,descripcion=?,stock=?,caducidad=?,precio=? WHERE idproducto = $this->idProducto";
+        $arrData = array($this->NombreProductos,$this->SelectCategorias,$this->Descricion,$this->Stock,$this->Caducidad,$this->Precio);
+        $request = $this->update($sql, $arrData);
+        return $request;
+    }
 
 
 		public function selectIdProductos($idProducto)
@@ -55,12 +55,12 @@
 			$request = $this->select($sql);
 			return $request;
 		}
-	// 	public function delCliente($idCliente)
-    // {
-    //     $sql = "DELETE FROM persona WHERE idpersona = $idCliente";
-    //     $request = $this->delete($sql);
-    //     return $request;
-    // }
+		public function delProducto($idProductos)
+    {
+        $sql = "DELETE FROM producto WHERE idproducto = $idProductos";
+        $request = $this->delete($sql);
+        return $request;
+    }
 		
 	}
  ?>

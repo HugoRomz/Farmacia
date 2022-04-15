@@ -95,22 +95,22 @@
 	}
 
 
-	// public function delCliente()
-    // {
-    //     if ($_POST) {
-    //         $idCliente =$_POST['idCliente'];
-    //         $requestDelete = $this->model->delCliente($idCliente);
-    //         if($requestDelete == 'ok')
-	// 			{
-	// 				$arrResponse = array('status' => true, 'msg' => 'Se ha eliminado');
-	// 			}else if($requestDelete == 'exist'){
-	// 				$arrResponse = array('status' => false, 'msg' => 'No es posible eliminar.');
-	// 			}else{
-	// 				$arrResponse = array('status' => false, 'msg' => 'Error al eliminar.');
-	// 			}
-	// 			echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
-	// 		}
-	// 		die();
-    //     }
+	public function delProductos()
+    {
+        if ($_POST) {
+            $idProductos =$_POST['idProductos'];
+            $requestDelete = $this->model->delProducto($idProductos);
+            if($requestDelete == 'ok')
+				{
+					$arrResponse = array('status' => true, 'msg' => 'Se ha eliminado');
+				}else if($requestDelete == 'exist'){
+					$arrResponse = array('status' => false, 'msg' => 'No es posible eliminar.');
+				}else{
+					$arrResponse = array('status' => false, 'msg' => 'Error al eliminar.');
+				}
+				echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
+			}
+			die();
+        }
 	}
  ?>

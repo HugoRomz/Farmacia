@@ -155,9 +155,9 @@ function fntEditProductos(button) {
 }
 
 
-function fntDelCliente(button) {
+function fntDelProductos(button) {
 
-    var idCliente = button.getAttribute("rl");
+    var idProductos = button.getAttribute("rl");
     Swal.fire({
         title: 'Estas seguro?',
         text: "Se eliminara el dato!",
@@ -170,8 +170,8 @@ function fntDelCliente(button) {
         if (result.isConfirmed) {
 
             var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XNLHTTP');
-            var ajaxUrl = base_url + 'Cliente/delCliente/';
-            var strData = "idCliente=" + idCliente;
+            var ajaxUrl = base_url + 'Productos/delProductos/';
+            var strData = "idProductos=" + idProductos;
 
             request.open("POST", ajaxUrl, true);
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -182,7 +182,7 @@ function fntDelCliente(button) {
                     // console.log(request.responseText);
                     var objData = JSON.parse(request.responseText);
                     if (objData.status) {
-                        tableCliente.ajax.reload(null, false);
+                        tableProductos.ajax.reload(null, false);
                         Swal.fire(
                             'Eliminado!',
                             'Tu registro fue eliminado.',
