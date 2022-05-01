@@ -56,7 +56,7 @@ header {
     top: 0;
     background: #2c3e50f1;
     margin-top: 70px;
-    padding-top: 30px;
+    padding-top: 10px;
     position: fixed;
     left: 0;
     width: 250px;
@@ -86,11 +86,16 @@ header {
 .sidebar .perfil h3 {
     color: #fff;
     margin-top: 0;
-    margin-bottom: 20px;
+}
+.sidebar .perfil p {
+
+  color: rgba(241, 196, 15);
+  margin-top: 5px;
 }
 
 .sidebar hr {
-    margin-bottom: 20px;
+  margin-top: 15px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
 }
 
@@ -99,12 +104,15 @@ header {
     color: #fff;
     display: block;
     width: 100%;
-    line-height: 60px;
+    line-height: 55px;
     text-decoration: none;
     padding-left: 40px;
     box-sizing: border-box;
     transition: 0.5s;
     transition-property: background;
+}
+.sidebar #nav-margin{
+  padding-left: 65px;
 }
 
 .sidebar a:hover {
@@ -132,6 +140,9 @@ label #sidebar_btn:hover{
 /* Oculta el sideBar */
 #checkSidebar:checked ~ .sidebar{
     left: -185px;
+}
+#checkSidebar:checked ~ .sidebar #nav-margin{
+  margin-left: 142px;
 }
 #checkSidebar:checked ~ .sidebar a span{
     display: none;

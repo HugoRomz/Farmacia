@@ -12,14 +12,18 @@
                         <form id="formProductos" name="formProductos">
                             <div class="form-style-6">
                                 <input type="hidden" id="idProducto" name="idProducto">
-                                <input type="text" id="txtNombreProductos" name="txtNombreProductos" placeholder="Nombre del Producto" required>
+                                <input type="text" id="txtNombreProductos" name="txtNombreProductos"
+                                    placeholder="Nombre del Producto" required>
                                 <select id="selectCategorias" name="selectCategorias" required></select>
-                                <input type="text" id="txtDescricion" name="txtDescricion" placeholder="Descricion" required>
+                                <input type="text" id="txtDescricion" name="txtDescricion" placeholder="Descricion"
+                                    required>
                                 <input type="number" name="numberStock" id="numberStock" required>
                                 <input type="date" name="dateCaducidad" id="dateCaducidad" required>
                                 <input type="text" id="txtPrecio" name="txtPrecio" placeholder="Precio" required>
-                                <!-- <input type="password" id="" name="" placeholder="Imagen"
-                                    required> -->
+                                    <div class="upload-file-wrapper">
+                                         <button class="file">Upload a file</button>
+                                         <input type="file" name="imagen" id="imagen"/>
+                                    </div>
                                 <div>
                                     <input class="btn-guardar" type="submit" value="Guardar" />
                                     <input class="btn-editar" type="submit" value="Editar" />

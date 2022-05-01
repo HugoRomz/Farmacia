@@ -12,10 +12,10 @@
 
 		public function ventas()
 		{
-			$data['page_id'] = 2;
 			$data['page_tag'] = "Ventas";
 			$data['page_title'] = "Puntos de Venta";
 			$data['page_name'] = "ventas";
+			$data['page_functions_js'] = "functions_ventas.js";
 			$this->views->getView($this,"ventas",$data);
 		}
 

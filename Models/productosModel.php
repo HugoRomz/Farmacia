@@ -21,13 +21,29 @@
 
             $request = $this->select_all($sql);
             return $request;
+        }  
+        public function selectProductosFull()
+        {
+            $sql = "SELECT  producto.idproducto,
+                            producto.nombrep,
+                            categoria.nombre,
+                            producto.descripcion,
+                            producto.stock,
+                            producto.caducidad,
+                            producto.precio,
+                            producto.imagen 
+                    FROM producto,categoria 
+                    WHERE producto.idcategoria = categoria.idcategoria;";
+
+            $request = $this->select_all($sql);
+            return $request;
         }
 
 		
-		public function insertProductos($strIdProducto,$strNombreProductos,$strSelectCategorias,$strDescricion,$intStock,$strCaducidad,$intPrecio)
+		public function insertProductos($strIdProducto,$strNombreProductos,$strSelectCategorias,$strDescricion,$intStock,$strCaducidad,$intPrecio,$imgDefault)
 		{
-			$query_insert = "INSERT INTO producto(idproducto,nombrep,idcategoria,descripcion,stock,caducidad,precio) VALUES(?,?,?,?,?,?,?)";
-			$arrData = array($strIdProducto,$strNombreProductos,$strSelectCategorias,$strDescricion,$intStock,$strCaducidad,$intPrecio);
+			$query_insert = "INSERT INTO producto(idproducto,nombrep,idcategoria,descripcion,stock,caducidad,precio,imagen) VALUES(?,?,?,?,?,?,?,?)";
+			$arrData = array($strIdProducto,$strNombreProductos,$strSelectCategorias,$strDescricion,$intStock,$strCaducidad,$intPrecio,$imgDefault);
 			$request_insert = $this->insert($query_insert, $arrData);
 			return $request_insert;
 		}
@@ -43,11 +59,28 @@
         $this->Precio = $intPrecio;
         
         $sql = "UPDATE producto SET nombrep=?,idcategoria=?,descripcion=?,stock=?,caducidad=?,precio=? WHERE idproducto = $this->idProducto";
-        $arrData = array($this->NombreProductos,$this->SelectCategorias,$this->Descricion,$this->Stock,$this->Caducidad,$this->Precio);
+        $arrData = array($this->NombreProductos,$this->SelectCategorias,$this->Descricion,$this->Stock,$this->Caducidad,$this->Precio,);
+        $request = $this->update($sql, $arrData);
+        return $request;
+    }
+    public function updateProductosImg(int $strIdProducto,String $strNombreProductos,String $strSelectCategorias,String $strDescricion,int $intStock,String $strCaducidad,float $intPrecio,String $imgDefault)
+    {
+        $this->idProducto = $strIdProducto;
+        $this->NombreProductos = $strNombreProductos;
+        $this->SelectCategorias = $strSelectCategorias;
+		$this->Descricion = $strDescricion;
+		$this->Stock = $intStock;
+		$this->Caducidad = $strCaducidad;
+        $this->Precio = $intPrecio;
+        $this->imagen = $imgDefault;
+        
+        $sql = "UPDATE producto SET nombrep=?,idcategoria=?,descripcion=?,stock=?,caducidad=?,precio=?,imagen=? WHERE idproducto = $this->idProducto";
+        $arrData = array($this->NombreProductos,$this->SelectCategorias,$this->Descricion,$this->Stock,$this->Caducidad,$this->Precio,$this->imagen);
         $request = $this->update($sql, $arrData);
         return $request;
     }
 
+    
 
 		public function selectIdProductos($idProducto)
 		{
@@ -61,6 +94,7 @@
         $request = $this->delete($sql);
         return $request;
     }
+        
 		
 	}
  ?>

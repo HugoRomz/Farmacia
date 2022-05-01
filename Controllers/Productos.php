@@ -54,24 +54,38 @@
 			$strCaducidad = strClean($_POST['dateCaducidad']);
 			$intPrecio = strClean($_POST['txtPrecio']);
 
+			$foto = $_FILES['imagen'];
+			$nombre_foto = $foto['name'];
+			$type = $foto['type'];
+			$url_temp = $foto['tmp_name'];
+			$imgDefault = 'default.png';
+
+			if ($nombre_foto != '') {
+				$imgDefault = 'img_'.md5(date('d-m-Y H:m:s')).'.jpg';
+			}
 
             if ($strIdProducto == 0) {
                 $option = 1;
                 //Crear
 				$strIdProducto = idRol();
-                $request_Rol = $this->model->insertProductos($strIdProducto,$strNombreProductos,$strSelectCategorias,$strDescricion,$intStock,$strCaducidad,$intPrecio);
+                $request_Rol = $this->model->insertProductos($strIdProducto,$strNombreProductos,$strSelectCategorias,$strDescricion,$intStock,$strCaducidad,$intPrecio,$imgDefault);
              }else {
                 //Actualizar
-                $request_Rol = $this->model->updateProductos($strIdProducto,$strNombreProductos,$strSelectCategorias,$strDescricion,$intStock,$strCaducidad,$intPrecio);
-                $option=2;
+				if ($nombre_foto != '') {
+					$request_Rol = $this->model->updateProductosImg($strIdProducto,$strNombreProductos,$strSelectCategorias,$strDescricion,$intStock,$strCaducidad,$intPrecio,$imgDefault);
+					$option=2;
+				}else {
+					$request_Rol = $this->model->updateProductos($strIdProducto,$strNombreProductos,$strSelectCategorias,$strDescricion,$intStock,$strCaducidad,$intPrecio);
+					$option=2;
+				}
             }
       
             if($option == 1)
             {
-                $arrResponse = array('status' => true, 'msg' => '1');
-
+                $arrResponse = array('status' => true, 'msg' => 'Guardado Correcto');
+				if ($nombre_foto != ''){uploadImage($foto,$imgDefault);}
             }else if($option==2){
-                $arrResponse = array('status' => true, 'msg' => '2');
+                $arrResponse = array('status' => true, 'msg' => 'Editado');
             }
         
             echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);

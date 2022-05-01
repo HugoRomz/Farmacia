@@ -19,6 +19,11 @@
 
 	//Simbolo de moneda
 	const SMONEY = "$";
+	
+	//Datos envio de correo
+	const NOMBRE_REMITENTE = "Farmacia DR.Mundo";
+	const EMAIL_REMITENTE = "rosalesrafael1@hotmail.com";
+	const NOMBRE_EMPRESA = "Farmacia DR.Mundo";
 
 	
 

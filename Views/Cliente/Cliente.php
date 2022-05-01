@@ -1,5 +1,6 @@
 <?php headerAdmin($data); ?>
 
+   
 <div class="MainContainer">
     <div class="container">
         <div class="row">
@@ -24,10 +25,13 @@
                                 <select id="selectRol" name="selectRol" required></select>
                                 <!-- <textarea name="field3" placeholder="Type your Message"></textarea> -->
                                 <div>
-
+                                
                                     <input class="btn-guardar" type="submit" value="Guardar" />
+                                
                                     <input class="btn-editar" type="submit" value="Editar" />
+        
                                     <input class="btn-limpiar" type="reset" value="Limpiar" />
+                                    
 
                                 </div>
                             </div>
@@ -70,6 +74,5 @@
     </div>
 
 </div>
-
 
 <?php footerAdmin($data); ?>

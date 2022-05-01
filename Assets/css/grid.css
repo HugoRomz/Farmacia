@@ -274,6 +274,29 @@
 	
 }
 
+.upload-file-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.file {
+  border: 1px solid rgba(241, 196, 15);
+  color: rgba(241, 196, 15);
+  background-color: white;
+  padding: 5px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom:15px;
+  cursor: pointer;
+}
+.upload-file-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
 .form-style-6 input[type="text"],
 .form-style-6 input[type="date"],
 .form-style-6 input[type="datetime"],
@@ -282,7 +305,6 @@
 .form-style-6 input[type="search"],
 .form-style-6 input[type="time"],
 .form-style-6 input[type="url"],
-.form-style-6 input[type="file"],
 .form-style-6 input[type="password"],
 .form-style-6 textarea
 {

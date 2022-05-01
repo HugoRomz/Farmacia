@@ -8,6 +8,7 @@
 			if (empty($_SESSION['login'])) {
 				header('location:'.base_url().'login');
 			}
+			getPermisos(2);
 		}
 
 		public function cliente()
@@ -24,13 +25,17 @@
 		{
 			$data = $this->model->selectCliente();
 			for ($i=0; $i < count($data); $i++) {
-			   
+
 				if ($data[$i]['status']!=0) {
               
 					$data[$i]['status'] = '<span class="badge badge-success">Activo</span>';
 				}else {
 					$data[$i]['status'] = '<span class="badge badge-danger">Deshabilitado</span>';
 				}
+
+				
+
+			
 
 				$data[$i]['password'] = "*********";
 

@@ -39,7 +39,7 @@
             <h3>Farmacia <span>Dr. Mundo</span> </h3>
         </div>
         <div class="area_derecha">
-            <a href="<?= base_url();?>/logout" class="btn_salir"><i class="fa-solid fa-right-from-bracket"></i></i></a>
+            <a href="<?= base_url();?>/logout" class="btn_salir"><i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
     </header>
     <!-- Termina el Header o navbar -->

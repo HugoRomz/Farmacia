@@ -142,6 +142,9 @@ function fntEditProductos(button) {
                 document.querySelector("#numberStock").value = objData.data.stock;
                 document.querySelector("#dateCaducidad").value = objData.data.caducidad;
                 document.querySelector("#txtPrecio").value = objData.data.precio;
+                
+                document.querySelector("#imagen").value = objData.data.imagen;
+
 
             } else {
                 Swal.fire(

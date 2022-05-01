@@ -8,6 +8,8 @@
     <title>Login Farmacia</title>
     <!-- Icono de la pagina -->
     <link rel="icon" type="image/x-icon" href="<?=media();?>images/favicon.ico">
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="<?=media();?>plugins/sweetalert2/sweetalert2.min.css">
 </head>
 <body>
     <div class="wrapper">
@@ -19,20 +21,24 @@
         </div>
         <div class="form-container">
             <div class="form-inner">
-            <form action="#" class="resetpass">       
+            <form id="formRecetPass" name="formRecetPass" action="#" class="resetpass">       
                     <div class="field">
-                        <input type="email" placeholder="Correo Electronico" required>
+                        <input id="txtEmailReset"name="txtEmailReset" class="fomr-control" type="email" placeholder="Correo Electronico" required>
                     </div>
                     <div class="pass-link"><a href="<?=base_url();?>login">Iniciar Sesión</a></div>
                     <div class="field">
-                        <input type="submit" value="Reset Contraseña">
+                        <button type="submit" class="btn btn-primary btn-block" ><i class="fa fa-unlock fa-lg fa-fw"></i>Resetear</button>
                     </div>
                 </form>
                 
             </div>
         </div>
     </div>
-
-  
+    <script>
+        const base_url = "<?= base_url();?>";
+    </script>
+    <!-- SweetAlert -->
+    <script src="<?=media();?>plugins/sweetalert2/sweetalert2.min.js"></script>
+    <script src="<?=media();?>js/functions_resetPass.js"></script>
 </body>
 </html>

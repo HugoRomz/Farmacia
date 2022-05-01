@@ -8,6 +8,8 @@
 			if (empty($_SESSION['login'])) {
 				header('location:'.base_url().'login');
 			}
+			dep(getPermisos(1));
+			
 		}
 
 		public function dashboard()

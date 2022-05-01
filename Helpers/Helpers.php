@@ -1,5 +1,12 @@
 <?php 
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'Libraries/PHPMailer/Exception.php';
+require 'Libraries/PHPMailer/PHPMailer.php';
+require 'Libraries/PHPMailer/SMTP.php';
+
 	//Retorla la url del proyecto
 	function base_url()
 	{
@@ -52,6 +59,86 @@
         $format .= print_r('</pre>');
         return $format;
     }
+
+    function uploadImage(array $data, String $name)
+    {
+        $url_temp = $data['tmp_name'];
+        $destino = 'Assets/images/uploads/'.$name;
+        $move = move_uploaded_file($url_temp,$destino);
+        return $move;
+    }
+    
+    function getPermisos(int $idmodulo){
+        require_once("Models/permisosModel.php");
+        $objPermisos = new permisosModel();
+        $idRol = $_SESSION['userData']['idrol'];
+        $arrPermisos = $objPermisos->permisosModulo($idRol);
+        $permisos = '';
+        $permisosMod = '';
+        if(count($arrPermisos)>0){
+            $permisos = $arrPermisos;
+            $permisosMod = isset($arrPermisos[$idmodulo]) ? $arrPermisos[$idmodulo] : "";
+        }
+        $_SESSION['permisos'] = $permisos;
+        $_SESSION['permisosMod'] = $permisosMod;
+    }
+
+    function sendEmail($data,$template)
+    {
+        $asunto = $data['asunto'];
+        $emailDestino = $data['email'];
+        $empresa = NOMBRE_REMITENTE;
+        $remitente = EMAIL_REMITENTE;
+        //ENVIO DE CORREO
+        $de = "MIME-Version: 1.0\r\n";
+        $de .= "Content-type: text/html; charset=UTF-8\r\n";
+        $de .= "From: {$empresa} <{$remitente}>\r\n";
+        ob_start();
+        require_once("Views/Template/Email/".$template.".php");
+        $mensaje = ob_get_clean();
+        $send = mail($emailDestino, $asunto, $mensaje, $de);
+        return $send;
+    }
+
+    function sendEmailLocal($data,$template)
+    {
+        //Create an instance; passing `true` enables exceptions
+        $mail = new PHPMailer(true);
+        ob_start();
+        require_once("Views/Template/Email/".$template.".php");
+        $mensaje = ob_get_clean();
+
+        try {
+            //Server settings
+            $mail->SMTPDebug = 0;                      //Enable verbose debug output
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = 'farmaciadrmundo@gmail.com';                     //SMTP username
+            $mail->Password   = 'farmaciadrmundo1D';                               //SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+            //Recipients
+            $mail->setFrom('farmaciadrmundo@gmail.com', 'Servidor Local');
+            $mail->addAddress($data['email']);     //Add a recipient
+            if(!empty($data['emailCopia'])){
+                $mail->addBCC($data['emailCopia']);
+            }
+
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = $data['asunto'];
+            $mail->Body    = $mensaje;
+            
+            $mail->send();
+            return true;
+            echo 'Mensaje enviado';
+        } catch (Exception $e) {
+           return false;
+        }
+    }
+
     //Elimina exceso de espacios entre palabras
     function strClean($strCadena){
         $string = preg_replace(['/\s+/','/^\s|\s$/'],[' ',''], $strCadena);
