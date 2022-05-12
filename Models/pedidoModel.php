@@ -23,14 +23,46 @@
         }
 
 		
-	// 	public function insertProductos($strIdProducto,$strNombreProductos,$strSelectCategorias,$strDescricion,$intStock,$strCaducidad,$intPrecio,$imgDefault)
+		public function insertarCarrito(String $idpersona,int $idproducto,String $precio,String $imagen)
+		{
+			$query_insert = "INSERT INTO detalle_temp(idpersona,idproducto,precio,cantidad,imagen,status) VALUES(?,?,?,1,?,1)";
+			$arrData = array($idpersona,$idproducto,$precio,$imagen);
+			$request_insert = $this->insert($query_insert, $arrData);
+			return $request_insert;
+		}
+        	// 	public function selectIdProductos($idProducto)
 	// 	{
-	// 		$query_insert = "INSERT INTO producto(idproducto,nombrep,idcategoria,descripcion,stock,caducidad,precio,imagen) VALUES(?,?,?,?,?,?,?,?)";
-	// 		$arrData = array($strIdProducto,$strNombreProductos,$strSelectCategorias,$strDescricion,$intStock,$strCaducidad,$intPrecio,$imgDefault);
-	// 		$request_insert = $this->insert($query_insert, $arrData);
-	// 		return $request_insert;
+	// 		$sql = "SELECT * FROM producto WHERE idproducto = $idProducto";
+	// 		$request = $this->select($sql);
+	// 		return $request;
 	// 	}
+        
+        public function selectCarrito($idpersona)
+        {
+            $sql = "SELECT det.id,
+                           det.idpersona,
+                           p.nombrep,
+                           det.precio,
+                           det.cantidad,
+                           det.imagen,
+                           det.status 
+                    FROM detalle_temp as det,
+                         producto as p 
+                    WHERE det.idproducto = p.idproducto
+                      AND det.idpersona =$idpersona";
 
+            $request = $this->select_all($sql);
+            return $request;
+        }
+
+        
+		public function delPedido($idCarrito)
+        {
+            $sql = "DELETE FROM detalle_temp WHERE id = $idCarrito";
+            $request = $this->delete($sql);
+            return $request;
+        }
+        
 	// 	public function updateProductos(int $strIdProducto,String $strNombreProductos,String $strSelectCategorias,String $strDescricion,int $intStock,String $strCaducidad,float $intPrecio)
     // {
     //     $this->idProducto = $strIdProducto;
@@ -65,18 +97,7 @@
 
     
 
-	// 	public function selectIdProductos($idProducto)
-	// 	{
-	// 		$sql = "SELECT * FROM producto WHERE idproducto = $idProducto";
-	// 		$request = $this->select($sql);
-	// 		return $request;
-	// 	}
-	// 	public function delProducto($idProductos)
-    // {
-    //     $sql = "DELETE FROM producto WHERE idproducto = $idProductos";
-    //     $request = $this->delete($sql);
-    //     return $request;
-    // }
+
 		
 	}
  ?>

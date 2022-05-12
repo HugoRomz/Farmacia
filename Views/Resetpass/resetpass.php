@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="<?=media();?>plugins/sweetalert2/sweetalert2.min.css">
 </head>
 <body>
+<div id="divLoading">
+        <div>
+            <img src="<?=media();?>images/loading.svg" alt="Loading">
+        </div>
+    </div>
     <div class="wrapper">
         <div class="logo">
             <img src="<?=media();?>images/uploads/logo.svg" alt="" srcset="">
@@ -27,7 +32,7 @@
                     </div>
                     <div class="pass-link"><a href="<?=base_url();?>login">Iniciar Sesión</a></div>
                     <div class="field">
-                        <button type="submit" class="btn btn-primary btn-block" ><i class="fa fa-unlock fa-lg fa-fw"></i>Resetear</button>
+                        <input type="submit" ><i class="fa fa-unlock fa-lg fa-fw"></i>Resetear</input>
                     </div>
                 </form>
                 

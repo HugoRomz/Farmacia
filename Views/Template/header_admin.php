@@ -34,10 +34,10 @@
     <header>
         <label for="checkSidebar">
             <i class="fas fa-bars" id="sidebar_btn"></i>
-        </label>
-        <div class="area_izquierda">
+        </label><a style="text-decoration:none;" href="<?= base_url();?>"><div class="area_izquierda">
             <h3>Farmacia <span>Dr. Mundo</span> </h3>
-        </div>
+        </div></a>
+      
         <div class="area_derecha">
             <a href="<?= base_url();?>/logout" class="btn_salir"><i class="fa-solid fa-right-from-bracket"></i></a>
         </div>

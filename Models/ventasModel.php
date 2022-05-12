@@ -1,6 +1,6 @@
 <?php 
 
-	class pedidoModel extends Mysql
+	class ventasModel extends Mysql
 	{
 		public function __construct()
 		{

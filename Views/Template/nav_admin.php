@@ -37,26 +37,18 @@
       <?php }?>
 
       <?php if(!empty($_SESSION['permisos'][3]['r'])) {?>
-        <a href="<?=base_url();?>cliente"><i class="fas fa-users"></i><span>Usuarios</span></a>
-        <a id="nav-margin" href="<?=base_url();?>roles"><i class="fa-regular fa-circle"></i><span>Roles</span></a>
+        <a href="<?=base_url();?>productos"><i class="fas fa-users"></i><span>Productos</span></a>
+        <a id="nav-margin" href="<?=base_url();?>roles"><i class="fa-regular fa-circle"></i><span>Categorias</span></a>
       <?php } ?>
-
-      <?php if(!empty($_SESSION['permisos'][4]['r'])) {?>
-        <a href="<?=base_url();?>productos"><i class="fas fa-capsules"></i><span>Productos</span></a>
-        <a id="nav-margin" href="<?=base_url();?>categorias"><i
-              class="fa-regular fa-circle"></i><span>Categorias</span></a>
-      <?php } ?>       
-        <?php if(!empty($_SESSION['permisos'][5]['r'])) {?>
+    
+        <?php if(!empty($_SESSION['permisos'][3]['r'])) {?>
             <a href="<?=base_url();?>ventas"><i class="fas fa-cash-register"></i><span>Punto de Venta</span></a>
-        <?php } ?>
-
-        <?php if(!empty($_SESSION['permisos'][6]['r'])) {?>
-
             <a id="nav-margin" href="<?=base_url();?>pedido"><i class="fa-regular fa-circle"></i><span>Pedido</span></a>
         <?php } ?>
-        <?php if(!empty($_SESSION['permisos'][6]['r'])) {?>
+        
+
             <a href="<?=base_url();?>reportes"><i class="fas fa-file-invoice"></i><span>Reportes</span></a>
-        <?php } ?>
+    
 
   </div>
   <!-- Termina Barra Lateral -->

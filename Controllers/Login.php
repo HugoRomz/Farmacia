@@ -57,6 +57,39 @@
 			}
 			die();
 		}
+		public function loginRegister(){
+			
+            // $strIdCliente = intval($_POST['idCliente']);
+            $strNombre = strClean($_POST['txtNombreRegister']);
+			$strApellidos = "Marroquín";
+            $strTelefono = "+52 ";
+			$strEmail = strClean($_POST['txtEmailRegister']);
+			$strPassword = strClean($_POST['txtPasswordRegister']);
+
+			$strPasswordEncrypt = hash("SHA256",$strPassword);
+
+            if ($strEmail != "") {
+                $option = 1;
+                //Crear
+				$strIdCliente = idRol();
+
+                $request_Rol = $this->model->insertCliente($strIdCliente,$strNombre,$strApellidos,$strTelefono,$strEmail,$strPasswordEncrypt);
+             }else {
+				$option =2;
+			 }
+      
+            if($option == 1)
+            {
+                $arrResponse = array('status' => true, 'msg' => '1');
+
+            } if($option == 2)
+            {
+                $arrResponse = array('status' => false, 'msg' => '2');
+
+            }
+            echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
+        die();
+    }
 
 		public function resetPass(){
 			if ($_POST) {
@@ -130,6 +163,7 @@
 					$this->views->getView($this,"cambiar_password",$data);
 				}
 			}
+			sleep(1);
 			die();
 		}
 

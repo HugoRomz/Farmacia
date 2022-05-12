@@ -1,7 +1,8 @@
-
+  var divLoading = document.querySelector('#divLoading');
 document.addEventListener('DOMContentLoaded', function () {
 
-  
+
+
   if (document.querySelector("#formRecetPass")) {
     let formRecetPass = document.querySelector("#formRecetPass");
 
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         return false;
       } else {
-       
+        divLoading.style.display="flex";
         var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
         var ajaxurl = base_url + 'Login/resetPass';
         var formData = new FormData(formRecetPass);
@@ -79,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
               Swal.fire("Atencion", "Las contraseñas no coinciden.", "info");
               return false;
             }
-    
+            divLoading.style.display="flex";
             var request =(window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
             var ajaxUrl = base_url+'Login/setPassword';
             var formData = new FormData(formCambiarPass);
@@ -107,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
               }else{
                 Swal.fire("Atención","Error en el proceso", "error");
               }
+              divLoading.style.display="none";
             }
           }
         }

@@ -18,28 +18,64 @@
 			$data['page_functions_js'] = "functions_pedido.js";
 			$this->views->getView($this,"pedido",$data);
 		}
-
-		public function getPedido()
+		// Recibo los datos y guardo un det_temporal del producto
+		public function setCarrito()
 		{
-			$data = $this->model->selectPedido();
+			$data = json_decode($_POST['array'],true);
+			echo dep($data);
+			$idpersona = $data['comprador'];
+			$idproducto = intval($data['id']);
+			$precio = $data['precio'];
+			$imagen = $data['url'];
+			// Envio de productos al modelo
+			$request_Rol = $this->model->insertarCarrito($idpersona,$idproducto,$precio,$imagen);
+
+		}
+	
+		public function getCarrito(String $idCliente)
+		{
+			$data = $this->model->selectCarrito($idCliente);
+		
 			for ($i=0; $i < count($data); $i++) {
 			   
 				if ($data[$i]['status']!=0) {
               
-					$data[$i]['status'] = '<span class="badge badge-success">Pagado</span>';
+					$data[$i]['status'] = '<span class="status status-danger">Pendiente</span>';
 				}else {
-					$data[$i]['status'] = '<span class="badge badge-danger">Pendiente</span>';
+					$data[$i]['status'] = '<span class="status status-success">Pagado</span>';
+					
 				}
 
-				$data[$i]['options'] = '<div class="">
-				
+				$data[$i]['op'] = '<div class="">
+				<button class="eliminar eliminar-eliminar" id="btnDelCarrito" rl="'.$data[$i]['id'].'"onclick="fntDelCarrito(this);" title="Eliminar"><i class="fas fa-trash-alt"></i></button>
 				</div>';
+
+				$data[$i]['imgfu'] = '
+				<img src="'.media().'/images/uploads/'.$data[$i]['imagen'].'" alt="" width="100" height="100">
+				';
 			}
 			
 			echo json_encode($data,JSON_UNESCAPED_UNICODE);
 			die();
 		}
 
+	public function delPedido()
+    {
+        if ($_POST) {
+            $idCarrito =$_POST['idCarrito'];
+            $requestDelete = $this->model->delPedido($idCarrito);
+            if($requestDelete == 'ok')
+				{
+					$arrResponse = array('status' => true, 'msg' => 'Se ha eliminado');
+				}else if($requestDelete == 'exist'){
+					$arrResponse = array('status' => false, 'msg' => 'No es posible eliminar.');
+				}else{
+					$arrResponse = array('status' => false, 'msg' => 'Error al eliminar.');
+				}
+				echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
+			}
+			die();
+        }
 	// 	public function setCliente(){
 			
     //         $strIdCliente = intval($_POST['idCliente']);
@@ -92,22 +128,5 @@
 	// }
 
 
-	// public function delCliente()
-    // {
-    //     if ($_POST) {
-    //         $idCliente =$_POST['idCliente'];
-    //         $requestDelete = $this->model->delCliente($idCliente);
-    //         if($requestDelete == 'ok')
-	// 			{
-	// 				$arrResponse = array('status' => true, 'msg' => 'Se ha eliminado');
-	// 			}else if($requestDelete == 'exist'){
-	// 				$arrResponse = array('status' => false, 'msg' => 'No es posible eliminar.');
-	// 			}else{
-	// 				$arrResponse = array('status' => false, 'msg' => 'Error al eliminar.');
-	// 			}
-	// 			echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
-	// 		}
-	// 		die();
-    //     }
 	}
  ?>

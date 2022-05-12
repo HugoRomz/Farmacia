@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="<?=media();?>plugins/sweetalert2/sweetalert2.min.css">
 </head>
 <body>
+<div id="divLoading">
+        <div>
+            <img src="<?=media();?>images/loading.svg" alt="Loading">
+        </div>
+    </div>
     <div class="wrapper">
         <div class="logo">
             <img src="<?=media();?>images/uploads/logo.svg" alt="" srcset="">
@@ -32,10 +37,7 @@
             <input class="fomr-control" type="password" id="txtPasswordConfirm2" name="txtPasswordConfirm2" placeholder="Confirmar contraseña">
           </div>
           <div class="field">
-          <button type="submit" class="btn btn-primary btn-block" ><i class="fa fa-unlock fa-lg fa-fw"></i>Resetear</button>
-          </div>
-          <div class="field">
-            <p class="semibold-text mb-0"><a href="#" data-toggle="flip"><i class="fa fa-angle-left fa-fw"></i> Regresar al login</a></p>
+          <input type="submit" class="btn btn-primary btn-block" ><i class="fa fa-unlock fa-lg fa-fw"></i>Resetear</input>
           </div>
         </form>
                 

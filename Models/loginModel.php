@@ -29,6 +29,13 @@
             $request = $this->select($sql);
             return $request;
         }
+        public function insertCliente($strIdCliente,$strNombre,$strApellidos,$strTelefono,$strEmail,$strPassword)
+		{
+			$query_insert = "INSERT INTO persona(idpersona,nombres,apellido,telefono,email_user,password,idrol,status) VALUES(?,?,?,?,?,?,393336,1)";
+			$arrData = array($strIdCliente,$strNombre,$strApellidos,$strTelefono,$strEmail,$strPassword);
+			$request_insert = $this->insert($query_insert, $arrData);
+			return $request_insert;
+		}
 
         public function sessionLogin(int $idUser)
         {

@@ -14,6 +14,7 @@
 		{
 			$data['page_title'] = "Página Productos Tienda";
 			$data['page_content'] = "Página de productos con paginación";
+			// Obtengo los productos desde el modelo de productos
 			$data['productos'] = $this->model->getProductos();
 			$this->views->getView($this,"tienda",$data);
 		}

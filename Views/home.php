@@ -9,7 +9,7 @@
                <br> <i>"Farmacia Dr Mundo dile adios a tu sufrimiento y comienza hoy tu tratamiento"</i>
                <!-- <i>"Donde comienza el gran bienestar."</i> -->
                 </p>
-                <a href="<?=base_url();?>productos">Comprar Ahora</a>
+                <a href="<?=base_url();?>tienda">Comprar Ahora</a>
             </div>
             <div class="col-2">
                 <img src="<?=media();?>tienda/img/image2.png" class="imagen">

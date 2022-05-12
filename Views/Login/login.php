@@ -51,21 +51,21 @@
                     <div class="signup-link">No estas registrado? <a href="#">Registrate ahora</a></div>
                 </form>
 
-                <form action="#" class="singup">
+                <form id="formRegister" name="formRegister"  class="singup">
                     <div class="field">
-                        <input type="text" placeholder="Nombre" required>
+                        <input type="text" id="txtNombreRegister" name="txtNombreRegister"placeholder="Nombre"  required>
                     </div>
                     <div class="field">
-                        <input type="email" placeholder="Correo Electronico" required>
+                        <input type="email"  id="txtEmailRegister"  name="txtEmailRegister"placeholder="Correo Electronico"required>
                     </div>
                     <div class="field">
-                        <input type="password" placeholder="Contraseña" required>
+                        <input type="password"  id="txtPasswordRegister"   name="txtPasswordRegister"placeholder="Contraseña"required>
                     </div>
                     <div class="field">
-                        <input type="password" placeholder="Repertir contraseña" required>
+                        <input type="password"  id="txtPassword2Register"name="txtPassword2Register" placeholder="Repertir contraseña" required>
                     </div>
                     <div class="field">
-                        <input type="submit" value="Registrate">
+                        <input type="submit"  value="Registrate">
                     </div>
                 </form>
 
